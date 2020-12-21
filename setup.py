@@ -21,6 +21,8 @@ setup(
     ],
     packages=[
         'edx_repo_tools',
+        'edx_repo_tools.django2_codemods',
+        'edx_repo_tools.django3_codemods',
     ],
     install_requires=[
         'appdirs',
@@ -42,10 +44,10 @@ setup(
             'tag_release = edx_repo_tools.release.tag_release:main',
             'drip = edx_repo_tools.drip_survey:cli',
             'get_org_repo_urls = edx_repo_tools.dev.get_org_repo_urls:main',
-            'modernize_travis = django3_codemods.config_tools.travis_modernizer:main',
-            'modernize_tox = django3_codemods.config_tools.tox_modernizer:main',
+            'modernize_travis = edx_repo_tools.django3_codemods.travis_modernizer:main',
+            'modernize_tox = edx_repo_tools.django3_codemods.tox_modernizer:main',
             'modernize_openedx_yaml = edx_repo_tools.modernize_openedx_yaml:main',
-            'modernize_github_actions = django3_codemods.config_tools.github_actions_modernizer:main',
+            'modernize_github_actions = edx_repo_tools.django3_codemods.github_actions_modernizer:main',
             'add_common_constraint = edx_repo_tools.add_common_constraint:main',
         ],
     },
